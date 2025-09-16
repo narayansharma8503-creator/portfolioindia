@@ -1,0 +1,36 @@
+/* Reset & Base */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {font-family: Arial, sans-serif; line-height: 1.6; background: #f9fafb; color: #333;}
+
+/* Header */
+header {background: #1e3a8a; color: #fff; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000;}
+header h1 {margin-bottom: .5rem;}
+
+/* Navigation */
+nav ul {list-style: none; display: flex; justify-content: center; flex-wrap: wrap; transition: max-height 0.3s ease-in-out;}
+nav ul li {margin: 0 15px;}
+nav ul li a {color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s;}
+nav ul li a:hover {color: #facc15;}
+#menu-toggle {display: none; background: none; border: none; font-size: 1.8rem; color: #fff; cursor: pointer;}
+
+/* Layout */
+main {padding: 2rem; max-width: 1100px; margin: auto;}
+section {margin-bottom: 3rem;}
+section h2 {margin-bottom: 1rem; color: #1e3a8a; border-bottom: 2px solid #facc15; display: inline-block; padding-bottom: .2rem;}
+
+/* Cards & Grids */
+.grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;}
+.card {background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform .3s;}
+.card:hover {transform: translateY(-5px);}
+
+/* Footer */
+footer {background: #1e3a8a; color: #fff; text-align: center; padding: 1rem;}
+footer a {color: #facc15; margin: 0 8px; text-decoration: none;}
+footer a:hover {text-decoration: underline;}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    nav ul {flex-direction: column; max-height: 0; overflow: hidden;}
+    nav ul.show {max-height: 400px;}
+    #menu-toggle {display: block; margin-top: 10px;}
+}
