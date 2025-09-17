@@ -1,162 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Information -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CleanRide – AI Fleet Pollution Monitoring. Cleaner fleets. Healthier cities.">
-    <meta name="keywords" content="CleanRide, Fleet Monitoring, AI, IoT, Pollution Control, Sustainability, Green Mobility">
-    <meta name="author" content="Narayan Sharma">
-
-    <!-- Title -->
-    <title>CleanRide | Narayan Sharma</title>
-
-    <!-- Styles -->
-    <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {font-family: Arial, sans-serif; line-height: 1.6; background: #f9fafb; color: #333;}
-        header {background: #1e3a8a; color: #fff; padding: 1rem; text-align: center;}
-        header h1 {margin-bottom: .5rem;}
-        nav ul {list-style: none; display: flex; justify-content: center; flex-wrap: wrap;}
-        nav ul li {margin: 0 15px;}
-        nav ul li a {color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s;}
-        nav ul li a:hover {color: #facc15;}
-        main {padding: 2rem; max-width: 1100px; margin: auto;}
-        section {margin-bottom: 3rem;}
-        section h2 {margin-bottom: 1rem; color: #1e3a8a; border-bottom: 2px solid #facc15; display: inline-block; padding-bottom: .2rem;}
-        .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;}
-        .card {background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform .3s;}
-        .card:hover {transform: translateY(-5px);}
-        footer {background: #1e3a8a; color: #fff; text-align: center; padding: 1rem;}
-        footer a {color: #facc15; margin: 0 8px; text-decoration: none;}
-        footer a:hover {text-decoration: underline;}
-        @media (max-width: 768px) {
-            nav ul {flex-direction: column;}
-            nav ul li {margin: 10px 0;}
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Narayan Sharma | CleanRide — AI Fleet Pollution Monitoring. Cleaner fleets. Healthier cities." />
+  <title>Narayan Sharma — CleanRide</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>CleanRide</h1>
-        <p>“Cleaner Fleets. Healthier Cities.”</p>
-        <nav>
-            <ul>
-                <li><a href="#problem">Problem</a></li>
-                <li><a href="#solution">Solution</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#value">Value</a></li>
-                <li><a href="#market">Market</a></li>
-                <li><a href="#revenue">Revenue</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Skip to content for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <main>
-        <!-- Problem -->
-        <section id="problem">
-            <h2>The Silent Threat</h2>
-            <p>Urban centers face a critical challenge: heavy vehicles and cabs are major contributors to air pollution, impacting public health and environmental quality. Current monitoring is outdated and ineffective.</p>
-            <ul>
-                <li>Outdated Monitoring – Manual PUC checks with no real-time data.</li>
-                <li>High Operating Costs – Fuel costs and fines reduce profitability.</li>
-                <li>Regulatory Challenges – Lack of real-time enforcement and actionable data.</li>
-            </ul>
-        </section>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <div class="brand">
+        <h1 class="site-title">Narayan Sharma</h1>
+        <p class="site-subtitle">CleanRide — AI Fleet Pollution Monitoring</p>
+      </div>
+      <nav class="site-nav">
+        <button id="menu-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Solution</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#market">Market</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-        <!-- Solution -->
-        <section id="solution">
-            <h2>CleanRide: Our Smart Solution</h2>
-            <p>AI + IoT-powered system transforming fleet management & urban pollution control.</p>
-            <div class="grid">
-                <div class="card"><h3>01 Integrated IoT Device</h3><p>Compact device installed in vehicles for seamless data collection.</p></div>
-                <div class="card"><h3>02 Real-Time Monitoring</h3><p>Tracks emissions, fuel, and driving behavior live.</p></div>
-                <div class="card"><h3>03 Instant Alerts</h3><p>Automated alerts for deviations sent to fleet owners & authorities.</p></div>
-                <div class="card"><h3>04 Predictive AI Analytics</h3><p>Forecasts pollution risks and maintenance needs.</p></div>
-            </div>
-        </section>
+    <div id="hero" class="hero">
+      <div class="hero-overlay">
+        <h2 class="hero-title">Cleaner Fleets. Healthier Cities.</h2>
+        <p class="hero-lead">AI + IoT fleet pollution monitoring — real-time emissions, predictive analytics, instant alerts.</p>
+        <a class="cta" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </header>
 
-        <!-- Features -->
-        <section id="features">
-            <h2>Power-Packed Features</h2>
-            <div class="grid">
-                <div class="card"><h3>Comprehensive Monitoring</h3><p>CO₂, NOx, PM2.5, fuel usage, engine health & driver analytics.</p></div>
-                <div class="card"><h3>Seamless Integration</h3><p>Cloud dashboards, plug-and-play setup, solar backup.</p></div>
-            </div>
-        </section>
+  <!-- MAIN CONTENT -->
+  <main id="main">
+    <!-- About -->
+    <section id="about" class="section reveal">
+      <h3>The Silent Threat: Urban Air Pollution</h3>
+      <p>Heavy vehicles and cabs contribute significantly to urban pollution. Outdated monitoring systems fail to address real-time compliance and enforcement.</p>
+    </section>
 
-        <!-- Value -->
-        <section id="value">
-            <h2>Why It Matters</h2>
-            <div class="grid">
-                <div class="card"><h3>Fleet Operators</h3><p>Save 10–15% fuel, avoid fines, boost eco-branding.</p></div>
-                <div class="card"><h3>Governments & Cities</h3><p>Gain real-time insights, enforce compliance, support Smart Cities.</p></div>
-                <div class="card"><h3>Society & Environment</h3><p>Cleaner air, healthier communities, reduced carbon footprint.</p></div>
-            </div>
-        </section>
+    <!-- Solution -->
+    <section id="services" class="section reveal">
+      <h3>Our Smart Solution</h3>
+      <div class="grid cards-grid">
+        <article class="card"><h4>Integrated IoT Device</h4><p>Compact, plug-and-play device installed in vehicles.</p></article>
+        <article class="card"><h4>Real-Time Monitoring</h4><p>Live tracking of emissions, fuel, and driving patterns.</p></article>
+        <article class="card"><h4>Instant Alerts</h4><p>Automated reports to fleet owners and authorities.</p></article>
+        <article class="card"><h4>Predictive AI Analytics</h4><p>Forecasts risks and maintenance needs early.</p></article>
+      </div>
+    </section>
 
-        <!-- Market -->
-        <section id="market">
-            <h2>The Market Goldmine</h2>
-            <p>Growing demand for smart fleet monitoring solutions globally.</p>
-            <ul>
-                <li>India commercial fleet market: ₹250 Crore+ opportunity (1% share).</li>
-                <li>Target: Logistics, Cab operators, Bus networks, Government fleets.</li>
-            </ul>
-        </section>
+    <!-- Features -->
+    <section id="features" class="section reveal">
+      <h3>Power-Packed Features</h3>
+      <div class="grid cards-grid">
+        <div class="card small"><h4>Live Emission Tracking</h4><p>Monitor CO₂, NOx, PM2.5.</p></div>
+        <div class="card small"><h4>Fuel & Engine Insights</h4><p>Track fuel efficiency and engine health.</p></div>
+        <div class="card small"><h4>Driver Analytics</h4><p>Measure idling, speeding, braking.</p></div>
+        <div class="card small"><h4>Cloud Dashboards</h4><p>User-friendly dashboards for managers.</p></div>
+      </div>
+    </section>
 
-        <!-- Revenue -->
-        <section id="revenue">
-            <h2>Revenue Streams</h2>
-            <div class="grid">
-                <div class="card"><h3>Hardware Sales</h3><p>₹5,000/unit (~₹2,000 cost).</p></div>
-                <div class="card"><h3>SaaS Subscription</h3><p>₹300–₹500/month per vehicle.</p></div>
-                <div class="card"><h3>B2G Licensing</h3><p>Data dashboards for governments.</p></div>
-                <div class="card"><h3>Green Fleet Certification</h3><p>Eco-badges for compliant fleets.</p></div>
-            </div>
-        </section>
+    <!-- Market -->
+    <section id="market" class="section reveal">
+      <h3>Market Opportunity</h3>
+      <p>Smart fleet monitoring is a growing industry. Just 1% of the Indian fleet market is a ₹250+ Crore opportunity.</p>
+    </section>
 
-        <!-- Impact -->
-        <section id="impact">
-            <h2>Tangible Impact</h2>
-            <ul>
-                <li><strong>20–30% Emission Reduction</strong> – Cleaner fleet operations.</li>
-                <li><strong>10–15% Fuel Savings</strong> – Optimized driving behavior.</li>
-                <li><strong>100% Smart City Contribution</strong> – Supports sustainability goals.</li>
-            </ul>
-        </section>
+    <!-- Impact -->
+    <section id="impact" class="section reveal">
+      <h3>Tangible Impact</h3>
+      <div class="grid cards-grid">
+        <div class="card"><h4>20–30% Emission Reduction</h4></div>
+        <div class="card"><h4>10–15% Fuel Savings</h4></div>
+        <div class="card"><h4>Smart City Contribution</h4></div>
+      </div>
+    </section>
 
-        <!-- Vision -->
-        <section id="vision">
-            <h2>Our Vision Ahead</h2>
-            <p>CleanRide aims to set the global benchmark for AI-driven fleet pollution monitoring.</p>
-            <ul>
-                <li>Global Standard</li>
-                <li>Smarter, Cleaner Cities</li>
-                <li>Sustainable Mobility</li>
-            </ul>
-        </section>
+    <!-- Contact -->
+    <section id="contact" class="section reveal">
+      <h3>Contact Me</h3>
+      <div class="contact-grid">
+        <div class="card contact-card">
+          <h4>Details</h4>
+          <p>Email: <a href="mailto:narayansharma8503@gmail.com">narayansharma8503@gmail.com</a></p>
+          <p>Email: <a href="mailto:kbpro285@gmail.com">kbpro285@gmail.com</a></p>
+          <p>Phone: <a href="tel:+919829659238">+91 98296 59238</a></p>
+          <p>Phone: <a href="tel:+919358120205">+91 93581 20205</a></p>
+        </div>
+        <form class="card contact-form" id="contactForm">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your full name" />
 
-        <!-- Contact -->
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:NARAYANSHARMA8503@GMAIL.COM">info@cleanride.com</a></p>
-            <p>Phone: +919829659238</p>
-        </section>
-    </main>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 CleanRide | Narayan Sharma</p>
-        <p>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-            <a href="https://twitter.com" target="_blank">Twitter</a> |
-            <a href="https://github.com" target="_blank">GitHub</a>
-        </p>
-    </footer>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Your message"></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+          <p id="formMsg" class="form-msg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Narayan Sharma — CleanRide</p>
+    <p class="social">
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="https://twitter.com" target="_blank">Twitter</a> |
+      <a href="https://github.com" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
