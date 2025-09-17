@@ -5,21 +5,116 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Narayan Sharma | CleanRide — AI Fleet Pollution Monitoring. Cleaner fleets. Healthier cities." />
   <title>Narayan Sharma — CleanRide</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --accent: #1e3a8a;
+      --accent-2: #facc15;
+      --muted: #6b7280;
+      --radius: 10px;
+      --max-width: 1100px;
+    }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .site-header {
+      background: var(--accent);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .nav-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      align-items: center;
+    }
+    .site-title { margin: 0; font-size: 1.2rem; }
+    .site-subtitle { margin: 0; font-size: 0.9rem; opacity: 0.9; }
+
+    /* Navigation */
+    .nav-list { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+    .nav-list a { color: #fff; text-decoration: none; font-weight: bold; }
+    .nav-list a:hover { color: var(--accent-2); }
+    #menu-toggle { display: none; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(30,58,138,0.7),rgba(30,58,138,0.7)), url("https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      color: #fff;
+    }
+    .hero-title { font-size: 2rem; margin: 0 0 .5rem; }
+    .hero-lead { max-width: 700px; margin: 0 auto 1rem; }
+    .cta { background: var(--accent-2); color: #111; padding: .6rem 1.2rem; border-radius: var(--radius); text-decoration: none; font-weight: bold; }
+
+    /* Sections */
+    main { max-width: var(--max-width); margin: auto; padding: 2rem 1rem; }
+    .section { margin-bottom: 3rem; }
+    .section h3 { color: var(--accent); margin-bottom: 1rem; }
+
+    /* Grid */
+    .grid { display: grid; gap: 1.2rem; }
+    .cards-grid { grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); }
+
+    /* Cards */
+    .card {
+      background: var(--card);
+      padding: 1.2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+    .card.small { padding: 1rem; }
+
+    /* Contact grid */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    @media(max-width:768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* Form */
+    .contact-form label { display: block; margin: .5rem 0 .2rem; font-weight: bold; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: .6rem; border-radius: var(--radius); border: 1px solid #ccc;
+    }
+    .btn { background: var(--accent); color: #fff; border: none; padding: .6rem 1rem; border-radius: var(--radius); margin-top: .8rem; cursor: pointer; }
+    .btn:hover { background: #162f6a; }
+    .form-msg { margin-top: .5rem; font-size: .9rem; color: green; }
+
+    /* Footer */
+    .site-footer { background: var(--accent); color: #fff; text-align: center; padding: 1rem; }
+    .site-footer a { color: var(--accent-2); text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(20px); transition: all .7s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 <body>
-  <!-- Skip to content for accessibility -->
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- HEADER / NAV -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="nav-wrap">
-      <div class="brand">
+      <div>
         <h1 class="site-title">Narayan Sharma</h1>
         <p class="site-subtitle">CleanRide — AI Fleet Pollution Monitoring</p>
       </div>
-      <nav class="site-nav">
-        <button id="menu-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+      <nav>
+        <button id="menu-toggle">☰</button>
         <ul id="nav-list" class="nav-list">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Solution</a></li>
@@ -30,7 +125,6 @@
         </ul>
       </nav>
     </div>
-
     <div id="hero" class="hero">
       <div class="hero-overlay">
         <h2 class="hero-title">Cleaner Fleets. Healthier Cities.</h2>
@@ -40,7 +134,7 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main id="main">
     <!-- About -->
     <section id="about" class="section reveal">
@@ -124,6 +218,44 @@
     </p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Mobile nav toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        navList.classList.toggle("show");
+      });
+    }
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      const windowHeight = window.innerHeight;
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 80) {
+          el.classList.add("active");
+        }
+      });
+    });
+
+    // Contact form simulation
+    const form = document.getElementById("contactForm");
+    const formMsg = document.getElementById("formMsg");
+    if (form) {
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        formMsg.textContent = "Sending...";
+        setTimeout(() => {
+          formMsg.textContent = "Thank you! Your message has been sent.";
+          form.reset();
+        }, 800);
+      });
+    }
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
