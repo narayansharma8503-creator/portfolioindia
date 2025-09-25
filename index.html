@@ -1,261 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Narayan Sharma | CleanRide — AI Fleet Pollution Monitoring. Cleaner fleets. Healthier cities." />
-  <title>Narayan Sharma — CleanRide</title>
-  <style>
-    :root {
-      --bg: #f6f8fb;
-      --card: #ffffff;
-      --accent: #1e3a8a;
-      --accent-2: #facc15;
-      --muted: #6b7280;
-      --radius: 10px;
-      --max-width: 1100px;
-    }
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      background: var(--bg);
-      color: #222;
-      line-height: 1.6;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GyanSetu | Bridging Tradition & Knowledge</title>
+<style>
+/* --- Reset & Base --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+body { background-color: #fff; color: #0A0F3C; line-height: 1.6; scroll-behavior: smooth; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; }
 
-    /* Header */
-    .site-header {
-      background: var(--accent);
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .nav-wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem;
-      align-items: center;
-    }
-    .site-title { margin: 0; font-size: 1.2rem; }
-    .site-subtitle { margin: 0; font-size: 0.9rem; opacity: 0.9; }
+/* --- Header / Hero / Landing --- */
+header {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1603415526960-f39260b8a7e8') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFD700;
+    text-align: center;
+    padding: 0 20px;
+}
+header h1 { font-size: 4rem; font-family: 'Cinzel', serif; margin-bottom: 10px; }
+header p { font-size: 1.5rem; margin-bottom: 20px; }
+header .btn { background-color: #FF9933; color: #fff; padding: 15px 30px; border: none; font-size: 1rem; border-radius: 5px; margin: 5px; transition: 0.3s; }
+header .btn:hover { background-color: #D9822B; }
 
-    /* Navigation */
-    .nav-list { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
-    .nav-list a { color: #fff; text-decoration: none; font-weight: bold; }
-    .nav-list a:hover { color: var(--accent-2); }
-    #menu-toggle { display: none; }
+/* --- Sections --- */
+section { padding: 80px 20px; }
+section h2 { text-align: center; font-family: 'Cinzel', serif; font-size: 2.5rem; color: #0A0F3C; margin-bottom: 40px; }
 
-    /* Hero */
-    .hero {
-      background: linear-gradient(rgba(30,58,138,0.7),rgba(30,58,138,0.7)), url(cars.png");
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      padding: 4rem 2rem;
-      color: #fff;
-    }
-    .hero-title { font-size: 2rem; margin: 0 0 .5rem; }
-    .hero-lead { max-width: 700px; margin: 0 auto 1rem; }
-    .cta { background: var(--accent-2); color: #111; padding: .6rem 1.2rem; border-radius: var(--radius); text-decoration: none; font-weight: bold; }
+/* --- About --- */
+#about { background-color: #FFF8F0; color: #0A0F3C; }
+#about p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; text-align: center; }
 
-    /* Sections */
-    main { max-width: var(--max-width); margin: auto; padding: 2rem 1rem; }
-    .section { margin-bottom: 3rem; }
-    .section h3 { color: var(--accent); margin-bottom: 1rem; }
+/* --- Benefits --- */
+#benefits { background-color: #fff; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.benefit-card { background: #FF9933; color: #fff; flex: 1 1 250px; padding: 20px; border-radius: 10px; text-align: center; transition: 0.3s; }
+.benefit-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.benefit-card h3 { font-family: 'Cinzel', serif; margin-bottom: 10px; }
+.benefit-card p { font-size: 1rem; }
 
-    /* Grid */
-    .grid { display: grid; gap: 1.2rem; }
-    .cards-grid { grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); }
+/* --- Features / Highlights --- */
+#features { background-color: #FFF8F0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.feature-card { background: #0A0F3C; color: #FFD700; flex: 1 1 250px; padding: 20px; border-radius: 10px; text-align: center; transition: 0.3s; }
+.feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.feature-card h3 { font-family: 'Cinzel', serif; margin-bottom: 10px; }
+.feature-card p { font-size: 1rem; }
 
-    /* Cards */
-    .card {
-      background: var(--card);
-      padding: 1.2rem;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .card:hover { transform: translateY(-6px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
-    .card.small { padding: 1rem; }
+/* --- Schedule --- */
+#schedule table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: collapse; }
+#schedule th, #schedule td { border: 1px solid #FFD700; padding: 15px; text-align: center; }
+#schedule th { background-color: #FF9933; color: #fff; font-family: 'Cinzel', serif; }
 
-    /* Contact grid */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-    @media(max-width:768px) { .contact-grid { grid-template-columns: 1fr; } }
+/* --- Speakers --- */
+#speakers { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+.speaker { flex: 1 1 200px; text-align: center; }
+.speaker img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #FFD700; margin-bottom: 10px; }
+.speaker h4 { font-family: 'Cinzel', serif; margin-bottom: 5px; }
+.speaker p { font-size: 0.9rem; }
 
-    /* Form */
-    .contact-form label { display: block; margin: .5rem 0 .2rem; font-weight: bold; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; padding: .6rem; border-radius: var(--radius); border: 1px solid #ccc;
-    }
-    .btn { background: var(--accent); color: #fff; border: none; padding: .6rem 1rem; border-radius: var(--radius); margin-top: .8rem; cursor: pointer; }
-    .btn:hover { background: #162f6a; }
-    .form-msg { margin-top: .5rem; font-size: .9rem; color: green; }
+/* --- Registration --- */
+#register { background-color: #fff; }
+#register form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+#register input, #register button { padding: 12px; border-radius: 5px; border: 1px solid #FF9933; font-size: 1rem; }
+#register button { background-color: #FF9933; color: #fff; border: none; transition: 0.3s; }
+#register button:hover { background-color: #D9822B; }
 
-    /* Footer */
-    .site-footer { background: var(--accent); color: #fff; text-align: center; padding: 1rem; }
-    .site-footer a { color: var(--accent-2); text-decoration: none; }
-    .site-footer a:hover { text-decoration: underline; }
+/* --- Footer --- */
+footer { background-color: #0A0F3C; color: #FFD700; text-align: center; padding: 40px 20px; }
+footer a { color: #FFD700; margin: 0 10px; }
 
-    /* Reveal animation */
-    .reveal { opacity: 0; transform: translateY(20px); transition: all .7s ease; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-  </style>
+/* --- Responsive --- */
+@media(max-width:768px){
+    header h1 { font-size: 3rem; }
+    header p { font-size: 1.2rem; }
+    #features, #benefits { flex-direction: column; align-items: center; }
+    #speakers { flex-direction: column; align-items: center; }
+}
+</style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="nav-wrap">
-      <div>
-        <h1 class="site-title">Narayan Sharma</h1>
-        <p class="site-subtitle">CleanRide — AI Fleet Pollution Monitoring</p>
-      </div>
-      <nav>
-        <button id="menu-toggle">☰</button>
-        <ul id="nav-list" class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Solution</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#market">Market</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+
+<!-- Header / Landing -->
+<header>
+    <h1>GyanSetu</h1>
+    <p>Bridging Tradition & Knowledge</p>
+    <div>
+        <button class="btn" onclick="scrollToSection('register')">Register Now</button>
+        <button class="btn" onclick="scrollToSection('about')">Learn More</button>
     </div>
-    <div id="hero" class="hero">
-      <div class="hero-overlay">
-        <h2 class="hero-title">Cleaner Fleets. Healthier Cities.</h2>
-        <p class="hero-lead">AI + IoT fleet pollution monitoring — real-time emissions, predictive analytics, instant alerts.</p>
-        <a class="cta" href="#contact">Get in touch</a>
-      </div>
-    </div>
-  </header>
+</header>
 
-  <!-- MAIN -->
-  <main id="main">
-    <!-- About -->
-    <section id="about" class="section reveal">
-      <h3>The Silent Threat: Urban Air Pollution</h3>
-      <p>Heavy vehicles and cabs contribute significantly to urban pollution. Outdated monitoring systems fail to address real-time compliance and enforcement.</p>
-    </section>
-
-    <!-- Solution -->
-    <section id="services" class="section reveal">
-      <h3>Our Smart Solution</h3>
-      <div class="grid cards-grid">
-        <article class="card"><h4>Integrated IoT Device</h4><p>Compact, plug-and-play device installed in vehicles.</p></article>
-        <article class="card"><h4>Real-Time Monitoring</h4><p>Live tracking of emissions, fuel, and driving patterns.</p></article>
-        <article class="card"><h4>Instant Alerts</h4><p>Automated reports to fleet owners and authorities.</p></article>
-        <article class="card"><h4>Predictive AI Analytics</h4><p>Forecasts risks and maintenance needs early.</p></article>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="section reveal">
-      <h3>Power-Packed Features</h3>
-      <div class="grid cards-grid">
-        <div class="card small"><h4>Live Emission Tracking</h4><p>Monitor CO₂, NOx, PM2.5.</p></div>
-        <div class="card small"><h4>Fuel & Engine Insights</h4><p>Track fuel efficiency and engine health.</p></div>
-        <div class="card small"><h4>Driver Analytics</h4><p>Measure idling, speeding, braking.</p></div>
-        <div class="card small"><h4>Cloud Dashboards</h4><p>User-friendly dashboards for managers.</p></div>
-      </div>
-    </section>
-
-    <!-- Market -->
-    <section id="market" class="section reveal">
-      <h3>Market Opportunity</h3>
-      <p>Smart fleet monitoring is a growing industry. Just 1% of the Indian fleet market is a ₹250+ Crore opportunity.</p>
-    </section>
-
-    <!-- Impact -->
-    <section id="impact" class="section reveal">
-      <h3>Tangible Impact</h3>
-      <div class="grid cards-grid">
-        <div class="card"><h4>20–30% Emission Reduction</h4></div>
-        <div class="card"><h4>10–15% Fuel Savings</h4></div>
-        <div class="card"><h4>Smart City Contribution</h4></div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section reveal">
-      <h3>Contact Me</h3>
-      <div class="contact-grid">
-        <div class="card contact-card">
-          <h4>Details</h4>
-          <p>Email: <a href="mailto:narayansharma8503@gmail.com">narayansharma8503@gmail.com</a></p>
-          <p>Email: <a href="mailto:kbpro285@gmail.com">kbpro285@gmail.com</a></p>
-          <p>Phone: <a href="tel:+919829659238">+91 98296 59238</a></p>
-          <p>Phone: <a href="tel:+919358120205">+91 93581 20205</a></p>
-        </div>
-        <form class="card contact-form" id="contactForm">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required placeholder="Your full name" />
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com" />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required placeholder="Your message"></textarea>
-
-          <button type="submit" class="btn">Send Message</button>
-          <p id="formMsg" class="form-msg"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Narayan Sharma — CleanRide</p>
-    <p class="social">
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-      <a href="https://twitter.com" target="_blank">Twitter</a> |
-      <a href="https://github.com" target="_blank">GitHub</a>
+<!-- About Section -->
+<section id="about">
+    <h2>About GyanSetu</h2>
+    <p>
+        GyanSetu is a visionary platform connecting India’s timeless wisdom with modern innovation. 
+        “Gyan” symbolizes knowledge, while “Setu” represents a bridge. Together, GyanSetu creates a bridge of knowledge—linking ancient traditions to the digital age. 
+        Join us to explore, learn, and celebrate India’s cultural heritage while inspiring innovation for the future.
     </p>
-  </footer>
+</section>
 
-  <script>
-    // Mobile nav toggle
-    const menuToggle = document.getElementById("menu-toggle");
-    const navList = document.getElementById("nav-list");
-    if (menuToggle) {
-      menuToggle.addEventListener("click", () => {
-        navList.classList.toggle("show");
-      });
-    }
+<!-- Benefits Section -->
+<section id="benefits">
+    <h2>Benefits for Attendees</h2>
+    <div class="benefit-card">
+        <h3>Expand Knowledge</h3>
+        <p>Gain insights from India’s traditional wisdom and modern applications.</p>
+    </div>
+    <div class="benefit-card">
+        <h3>Networking</h3>
+        <p>Connect with scholars, innovators, and like-minded enthusiasts.</p>
+    </div>
+    <div class="benefit-card">
+        <h3>Skill Development</h3>
+        <p>Participate in workshops and interactive sessions to enhance practical skills.</p>
+    </div>
+    <div class="benefit-card">
+        <h3>Certification</h3>
+        <p>Receive a certificate of participation for professional growth.</p>
+    </div>
+</section>
 
-    // Scroll reveal
-    const reveals = document.querySelectorAll(".reveal");
-    window.addEventListener("scroll", () => {
-      const windowHeight = window.innerHeight;
-      reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < windowHeight - 80) {
-          el.classList.add("active");
-        }
-      });
-    });
+<!-- Features / Highlights -->
+<section id="features">
+    <h2>Event Highlights</h2>
+    <div class="feature-card">
+        <h3>Keynote Talks</h3>
+        <p>Engage with scholars and thought leaders on India’s wisdom.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Cultural Dialogues</h3>
+        <p>Explore heritage through discussions and interactive sessions.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Workshops & Panels</h3>
+        <p>Practical insights on traditional knowledge applied today.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Interactive Sessions</h3>
+        <p>Q&A sessions and networking with experts and participants.</p>
+    </div>
+</section>
 
-    // Contact form simulation
-    const form = document.getElementById("contactForm");
-    const formMsg = document.getElementById("formMsg");
-    if (form) {
-      form.addEventListener("submit", e => {
-        e.preventDefault();
-        formMsg.textContent = "Sending...";
-        setTimeout(() => {
-          formMsg.textContent = "Thank you! Your message has been sent.";
-          form.reset();
-        }, 800);
-      });
-    }
+<!-- Schedule Section -->
+<section id="schedule">
+    <h2>Event Schedule</h2>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Speaker/Host</th>
+        </tr>
+        <tr>
+            <td>10:00 AM</td>
+            <td>Opening Ceremony</td>
+            <td>Narayan Sharma & Krishna Bhati</td>
+        </tr>
+        <tr>
+            <td>10:30 AM</td>
+            <td>Keynote: Indian Wisdom Today</td>
+            <td>Dr. [Name]</td>
+        </tr>
+        <tr>
+            <td>11:30 AM</td>
+            <td>Panel Discussion</td>
+            <td>Experts’ Panel</td>
+        </tr>
+        <tr>
+            <td>1:00 PM</td>
+            <td>Cultural Workshop</td>
+            <td>[Instructor Name]</td>
+        </tr>
+        <tr>
+            <td>2:00 PM</td>
+            <td>Closing & Networking</td>
+            <td>Narayan Sharma & Krishna Bhati</td>
+        </tr>
+    </table>
+</section>
 
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<!-- Speakers Section -->
+<section id="speakers">
+    <h2>Meet Our Organizers</h2>
+    <div class="speaker">
+        <img src="https://via.placeholder.com/150" alt="Narayan Sharma">
+        <h4>Narayan Sharma</h4>
+        <p>Event Organizer & Cultural Enthusiast</p>
+        <p>Contact: 9829659238</p>
+    </div>
+    <div class="speaker">
+        <img src="https://via.placeholder.com/150" alt="Krishna Bhati">
+        <h4>Krishna Bhati</h4>
+        <p>Event Organizer & Knowledge Curator</p>
+        <p>Contact: 9358120205</p>
+    </div>
+</section>
+
+<!-- Registration Section -->
+<section id="register">
+    <h2>Register for GyanSetu</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Contact Number" required>
+        <input type="text" placeholder="Organization (optional)">
+        <button type="submit">Reserve Your Spot</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 GyanSetu | All Rights Reserved</p>
+    <p>Contact: 9829659238 | 9358120205 | Email: info@gyansetu.com</p>
+    <p>Follow us: 
+        <a href="#">Facebook</a> | 
+        <a href="#">Twitter</a> | 
+        <a href="#">LinkedIn</a>
+    </p>
+</footer>
+
+<!-- JS -->
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
 </body>
 </html>
